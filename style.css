@@ -1,0 +1,425 @@
+body {
+    position: relative;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 300;
+    background-color: #D1E8DB;
+}
+
+.upper {
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+}
+
+.purple {
+    margin: 0;
+    padding: 0;
+    color: #5564B6;
+}
+
+
+/****
+NAVIGATION
+***/
+
+.nav-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    padding-top: 1em;
+    font-size: 1.2em;
+    font-weight: 400;
+    z-index: 1;
+}
+
+.nav-link {
+    padding-right: 2em;
+    text-decoration: none;
+    color: #0F780C;
+    text-shadow: 1.2px 1.2px pink;
+}
+
+.nav-link:hover {
+    text-shadow: 0 0 15px rgba(255, 255, 8, .8);
+    color: #0F780C;
+    cursor: pointer;
+}
+
+/***
+HOMEPAGE
+***/
+
+#welcome-section {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 100vh;
+    padding-top: 4em;  /**to move flex items down**/
+    font-family: 'Special Elite', cursive;
+}
+
+#hello {
+    margin: 0;
+    position: relative;
+    font-size: 3.2em;
+}
+
+.text-container {
+    align-self: center; 
+    margin-right: 2em;
+    margin-top: 11em;
+    color: rgba(0, 0, 0, .8);
+}
+
+#hello::after {
+    content: '';
+    position: absolute;
+    top: 1.2em;
+    z-index: -1;
+    left: -.3em;
+    display: block;  /**needed?**/
+    height: 25%;
+    width: 50%;
+    background-color: #ffffdd;
+}
+
+.intro {
+    position: relative;
+    padding: 0;
+    font-size: 1.2em;
+}
+
+.intro::before {
+    content: '';
+    position: absolute;
+    top: -.25em;
+    left: 3.5em;
+    z-index: -1;
+    display: block;  /**needed?**/
+    height: 150%;
+    width: 25%;
+    background-color: #ffffdd;
+}
+
+.intro::after {
+    content: '';
+    position: absolute;
+    top: -.15em;
+    right: 4em;
+    z-index: -1;
+    display: block; /**ect**/
+    height: 80%;
+    width: 25%;
+    background-color: #ffffdd;
+}
+
+/***sun and clouds drawings***/
+
+
+#suncld {   /**container for sun and clouds**/
+    position: relative;
+    align-self: flex-start;    /**to move the container to the right of the homepage**/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 18.7em;
+    width: 18.7em;
+    margin-right: 16em;         
+
+}
+
+#sun {
+    width: 14.6em;
+    height: 13.5em;
+    border-radius: 95%;
+    background-color: rgba(255, 251, 131, .8);
+    box-shadow: 0 0 15px rgba(255, 255, 8, .8);
+}
+
+.clouds {
+    position: relative;
+    height: 80px;
+    width: 12.1em;
+    border-radius: 50px;
+    background-color: #fff;
+}
+
+.clouds::before,
+.clouds::after {
+    content: '';
+    display: block;
+    background-color:#fff;;
+}
+
+.cloud1::before {
+    position: absolute;
+    top: -2.5em;
+    right: 3.5em;
+    height: 85px;
+    width: 95px;
+    border-radius: 80%;
+}
+
+.cloud1::after {
+    position: absolute;
+    top: -1.5em;
+    left: 5em;
+    height: 80px;
+    width: 80px;
+    border-radius: 100%;
+}
+
+.cloud2::before {
+    position: absolute;
+    top: -2.5em;
+    right: 3.5em;
+    height: 85px;
+    width: 95px;
+    border-radius: 80%;
+}
+
+.cloud2::after {
+    position: absolute;
+    top: -1.5em;
+    left: 5em;
+    height: 80px;
+    width: 80px;
+    border-radius: 100%;
+}
+
+.cloud1 {
+    position: absolute;
+    top: 68%;    /*9,6*/
+    left: -12%;
+    box-shadow: .5px .5px 0px rgba(0, 0, 0, .2);
+}
+
+.cloud2 {
+    position: absolute;
+    top:7%;     /*3,-7*/
+    right: -25%;
+    box-shadow: -1px .5px 0px rgba(0, 0, 0, .2);
+}
+
+/****
+PROJECTS
+****/
+#projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    padding-top: 2.5em;
+    background-color: rgba(250, 251, 255, .7);
+}
+
+.proj-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 3em;
+    width: 80vw;
+    padding-bottom: 4em;
+    padding-top: 1.5em;
+}
+
+.proj {
+    display: flex;
+    align-items: center;   /*center text*/
+    justify-content: center;
+    height: 300px;
+    width: 300px;
+    background-color: #5D8078;
+    margin: auto;     /*center in project container*/
+    font-size: 2em;
+    color: #ffffdd;
+}
+
+.proj:hover {
+    background-color: rgba(93,128,120, .7);
+    color: #fff;
+}
+
+/****
+CONTACT
+****/
+#contact {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+    height: auto;
+}
+
+
+#house {
+    align-self: flex-end;  /***move the house to the footer**/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: auto;
+    width: auto;
+}
+
+.tri {
+    width: 0;
+    height: 0;
+    border-right: 8em solid transparent;
+    border-bottom: 9.3em solid rgba(153, 132, 132, .8);
+    border-left: 8em solid transparent; 
+}
+
+.sqr {
+    position: relative;
+    height: 6.2em;
+    width: 8.7em;
+    background-color: rgba(189,171,171, .8);
+}
+
+/**********contact form*********/
+
+.contact-form {
+    width: 40vw;
+    margin-top: 2em;
+    margin-bottom: 1em;
+    font-family: 'Special Elite', cursive;
+    text-align: center;
+}
+
+.contact-form span {font-size: 1.2em;}
+
+.field {
+    display: block;
+    width: 65%;
+    padding: .3em .8em;
+    margin: 0 auto 1em auto;
+    border-radius: 15px;
+    border: 2px solid rgba(0, 0, 0, 0);
+    outline: none;
+    background-color: #F0F0F0;
+    font-size: 1em;
+    transition: .3s;
+}
+
+
+.field::placeholder,
+.area::placeholder {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 300;
+    font-size: .8em;
+    color: rgba(128, 128, 128,.8);
+}
+.field:focus {
+    border: 1px solid rgba(30, 85, 250, .1);
+    background-color: #fff;
+    color: #0F780C;
+}
+
+.field:focus::placeholder {
+    color: #0F780C;
+}
+
+.area {min-height: 10em;}
+
+
+.submit-btn {
+    height: 2em;
+    width: 25%;
+    border-radius: .9em;
+    border: none;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    padding: .06em .3em; 
+    font-size: 1em;
+    color: #fffeee;
+    background-color: #0F780C;
+    cursor: pointer;
+    transition: transform .3s ease, top .3s ease;
+}
+
+.submit-btn:hover {
+    transform: rotateX(15deg);
+    box-shadow: 0 0 0 2px #fffeee;
+}
+
+.submit-btn:focus {outline: 0;}
+
+/****
+FOOTER
+****/
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3.2em;
+    background-color: #E8D1E6;
+    width: 100vw;
+}
+
+.copyright {margin: 0;}
+
+.social {
+    height: 2em;
+    width: 2em;
+    border-radius: 100%;
+    margin-left: 1em;
+    color: #000;
+}
+
+.social:hover {
+    background-color: rgba(255, 255, 255, .3);
+}
+
+
+
+@media (max-width: 64em) {
+
+    body {font-size: large;}
+
+    #welcome-section {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .text-container {
+        margin: 0;
+        text-align: center;
+    }
+
+    #hello {font-size: 2.5em;}
+
+    #hello::after {
+        width: 125px;
+        left: 3.4em;
+    }
+
+    #suncld {margin: 0 auto;}
+
+}
+
+/****to move the clouds at screen width 32em***********/
+@media (max-width: 32em) {
+    body {font-size: small;}
+
+    .cloud2 {
+        top:6em;
+        right: -3em;
+    }
+
+    .contact-form {
+        width: 90%;
+    }
+    #contact {
+        display: flex;
+        flex-direction: column;
+    }
+
+}
